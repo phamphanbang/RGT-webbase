@@ -1,6 +1,37 @@
-@import './colors.css';
+@import './constants.css';
 
+.header {
+    background: url(../resource/logo/1.jpg) no-repeat center top;
+    background-position: center;
+    background-size: 100%;
+}
 
-h1 {
-    color: var(--color-orange)
+.header-top {
+    padding: 2em 0em 3em;
+    
+}
+
+.logo {
+    float: left;
+    margin-left: 3em;
+}
+
+.header-right {
+    float: right;
+    margin-top: 3em;
+    width: 30%;
+}
+
+.social {
+    list-style: none;
+    float: left;
+}
+
+ul.social li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.social li i {
+    color: var(--color-black);
 }
