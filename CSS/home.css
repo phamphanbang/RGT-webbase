@@ -28,10 +28,11 @@ li {
     background: url(../resource/logo/1.jpg) no-repeat center top;
     background-position: center;
     background-size: 100%;
-    padding: 0% 10%;
+    padding: 0% 7%;
 }
 
 .header-top {
+    padding-top: 2em;
     padding-bottom: 3em;
     display: inline-block;
     width: 100%;
@@ -51,6 +52,7 @@ li {
 .social {
     list-style: none;
     float: left;
+    padding-left: 3em;
 }
 
 ul.social li {
@@ -68,10 +70,15 @@ ul.social li i {
 .banner {
     display: inline-block;
 }
+
+.banner-wrap {
+    display: flex;
+    justify-content: space-between;
+}
 /*---#BANNER-LEFT---*/
 .banner-left {
     float: left;
-    width: 40%;
+    width: 30%;
 }
 
 .login {
@@ -164,4 +171,61 @@ ul.quick-access li a {
     padding: 4em 8%;
     text-align: justify;
     font-weight: 800;
+}
+
+.welcome-box h2 {
+    margin-bottom: 1em;
+}
+/*----------------#BANNER-RIGHT-----------------*/
+
+.banner-right {
+    color: var(--color-yellow);
+    width: 40%;
+    margin-top: 3em;
+}
+
+.banner-right a {
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
+    font-weight: 600;
+    margin-top: 3em;
+    padding: 10px 20px;
+}
+
+.slide-button {
+    display: flex;
+    align-items: center;
+}
+
+.slide-button a {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    border-radius: 0%;
+    border-color: white;
+    background-color: white;
+    color: var(--color-black);
+}
+
+.slide-control {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-navigation {
+    margin: 0px 1em;
+}
+
+.slide-navigation a {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: yellow;
+    text-indent: -9999px;
+    margin-bottom: 2em;
+}
+
+.slide-navigation .activate {
+    background-color: var(--color-orange) !important;
 }
