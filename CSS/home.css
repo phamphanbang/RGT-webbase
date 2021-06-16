@@ -1,14 +1,40 @@
 @import './constants.css';
 
+
+ul {
+    list-style: none;
+    display:block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+p {
+    margin:0px;
+}
+
+li {
+    padding: 0px;
+}
+
+.container {
+    display: inline-block;
+    
+}
+
 .header {
     background: url(../resource/logo/1.jpg) no-repeat center top;
     background-position: center;
     background-size: 100%;
+    padding: 0% 10%;
 }
 
 .header-top {
-    padding: 2em 0em 3em;
-    
+    padding-bottom: 3em;
+    display: inline-block;
+    width: 100%;
 }
 
 .logo {
@@ -34,4 +60,108 @@ ul.social li {
 
 ul.social li i {
     color: var(--color-black);
+}
+
+
+
+/*-------#BANNER-----------*/
+.banner {
+    display: inline-block;
+}
+/*---#BANNER-LEFT---*/
+.banner-left {
+    float: left;
+    width: 40%;
+}
+
+.login {
+    list-style: none;
+    display: block;
+    background-color: #f8f8f8;
+    margin-bottom: 0px;
+    padding: 0px 10%;
+}
+
+ul.login li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.login li a {
+    color: var(--color-orange);
+}
+
+.cart {
+    background-color: var(--color-orange);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.cart-description {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.cart-description li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.cart-control {
+    display: inline-block;
+    text-align: center;
+    margin: 0px;
+    padding-right: 1em;
+}
+
+.quick-access {
+    list-style: none;
+    display: block;
+    background-color: var(--color-darker-orange);
+    margin-bottom: 0px;
+    padding: 0px 10%;
+}
+
+ul.quick-access li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.quick-access li a {
+    color: white;
+}
+
+.search {
+    display: flex;
+}
+
+.inp-text {
+    width: 87%;
+    border: none;
+    padding-top: 5px;
+    padding: 5px 5px 5px 10px;
+}
+
+.inp-text:focus {
+    outline: none;
+}
+
+.inp-submit {
+    border: none;
+    border-radius: 0%;
+    width: 13%;
+    padding: inherit;
+    background-color: var(--color-black);
+}
+
+
+.welcome-box {
+    background-color: var(--color-yellow);
+    margin-top: 1em;
+    padding: 4em 8%;
+    text-align: justify;
+    font-weight: 800;
 }
