@@ -257,3 +257,26 @@ ul.quick-access li a {
     background-color: var(--color-teal);
     padding: 0.60em;
 }
+
+.ads {
+    position: relative;
+}
+
+.img-holder img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.ads-holder {
+    position: absolute;
+    left: 6em;
+    top: 35%;
+    width: 100%;
+    text-align: left;
+}
+
+.ads-holder h3 {
+    font-weight: 800;
+    font-style: italic;
+}
