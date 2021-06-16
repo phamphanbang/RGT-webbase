@@ -229,3 +229,31 @@ ul.quick-access li a {
 .slide-navigation .activate {
     background-color: var(--color-orange) !important;
 }
+
+/*----------#MAIN--------*/
+.main {
+    padding: 0px 8%;
+}
+
+.menu-box {
+    margin-bottom: 2em;
+}
+
+.menu-box h3 {
+    padding: 1em 3em 1em 1em;
+    margin: 0px;
+    background-color: var(--color-black);
+    font-size: 20px;
+    color: white;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: block;
+    background-color: var(--color-teal);
+    padding: 0.60em;
+}
