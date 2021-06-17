@@ -426,7 +426,7 @@ ul.quick-access li a {
 
 .insta-header {
     display: flex;
-    padding-top: 3em;
+    padding-top: 2em;
     padding-bottom: 1.5em;
     align-items: center;
     justify-content: center;
@@ -445,10 +445,42 @@ ul.quick-access li a {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 3em;
+    padding-bottom: 4em;
 }
 
 .insta-img-holder {
     padding: 0.5em;
     background-color: #fff;
+}
+
+.social-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.social-banner-holder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    color: white;
+}
+
+.social-banner-holder i{
+    padding: 10%;
+}
+
+.facebook {
+    background-color: #3b5997;
+}
+
+.twitter {
+    background-color: #3fccfd;
+}
+
+.pinterest {
+    background-color: #cb2027;
 }
