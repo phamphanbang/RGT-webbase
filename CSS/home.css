@@ -1,5 +1,8 @@
 @import './constants.css';
 
+body {
+    background-color: #f8f8f8;
+}
 
 ul {
     list-style: none;
@@ -28,7 +31,7 @@ li {
     background: url(../resource/logo/1.jpg) no-repeat center top;
     background-position: center;
     background-size: 100%;
-    padding: 0% 7%;
+    padding: 0% 9%;
 }
 
 .header-top {
@@ -182,6 +185,8 @@ ul.quick-access li a {
     color: var(--color-yellow);
     width: 40%;
     margin-top: 3em;
+    margin-top: 5em;
+    margin-left: 10em;
 }
 
 .banner-right a {
@@ -199,7 +204,7 @@ ul.quick-access li a {
 }
 
 .slide-button a {
-    height: 15%;
+    height: 10%;
     display: flex;
     align-items: center;
     border-radius: 0%;
@@ -232,7 +237,7 @@ ul.quick-access li a {
 
 /*----------#MAIN--------*/
 .main {
-    padding: 0px 8%;
+    padding: 0px 10%;
 }
 
 .col-md-3 {
@@ -287,11 +292,14 @@ ul.quick-access li a {
 
 .tags {
     margin-top: 2em;
+    background: #fff;
+    padding: 20px 10px;
 }
 
 .tags h3 {
     margin-bottom: 1em;
-    font-weight: bold;
+    font-weight: 900;
+    font-size: larger;
 }
 
 .tags-holder {
