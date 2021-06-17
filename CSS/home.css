@@ -417,3 +417,38 @@ ul.quick-access li a {
     max-height: 100%;
     object-fit: cover;
 }
+
+
+.insta-feed {
+    margin: 0px 10%;
+    background-color: #d2cccc;
+}
+
+.insta-header {
+    display: flex;
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.insta-header i {
+    margin-right: 5px;
+    font-size: 2em;
+}
+
+.insta-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 3em;
+}
+
+.insta-img-holder {
+    padding: 0.5em;
+    background-color: #fff;
+}
