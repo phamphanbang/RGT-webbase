@@ -81,7 +81,7 @@ ul.social li i {
 /*---#BANNER-LEFT---*/
 .banner-left {
     float: left;
-    width: 30%;
+    width: 20%;
 }
 
 .login {
@@ -110,9 +110,11 @@ ul.login li a {
 }
 
 .cart-description {
-    display: inline-block;
+    display: flex;
     padding: 0px;
     margin: 0px;
+    align-items: center;
+    justify-content: space-around;
 }
 
 ul.cart-description li {
@@ -129,10 +131,13 @@ ul.cart-control {
 
 .quick-access {
     list-style: none;
-    display: block;
+    display: flex;
     background-color: var(--color-darker-orange);
     margin-bottom: 0px;
-    padding: 0px 10%;
+    padding: 0px 0%;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
 ul.quick-access li {
@@ -248,11 +253,6 @@ ul.quick-access li a {
 }
 
 
-
-.menu-box {
-    margin-bottom: 2em;
-}
-
 .menu-box h3 {
     padding: 1em 3em 1em 1em;
     margin: 0px;
@@ -336,9 +336,7 @@ ul.quick-access li a {
 
 /*-------#PRODUCT-----------*/
 
-.product {
-    margin-bottom: 3em;
-}
+
 
 .product-header {
     display: flex;
