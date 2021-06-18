@@ -43,7 +43,6 @@
 
 .form-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -54,7 +53,7 @@
 .form-padding {
     background-color: #a09d9d;
     height: 20em;
-    margin: 0px 30px;
+    margin: 70px 30px;
     padding: 0.5px;
 }
 
