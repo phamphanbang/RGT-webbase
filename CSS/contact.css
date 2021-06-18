@@ -1,0 +1,116 @@
+@import './constants.css';
+@import './component/general.css';
+@import './component/header.css';
+@import './component/main.css';
+@import './component/brand.css';
+@import './component/insta-feed.css';
+@import './component/social-banner.css';
+@import './component/footer.css';
+@import './component/footer-bottom.css';
+
+
+.banner-left {
+    flex: 1;
+    margin-bottom: 2em;
+}
+
+.menu-box {
+    margin-bottom: 2em;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 0em;
+    color: #a0a0a0;
+}
+
+.from-to , .back {
+    display: flex;
+    align-items: center;
+}
+
+.from-to i , .back i {
+    margin-top: 3px;;
+    padding: 0px 0.75em;
+}
+
+.to {
+    padding: 0.5em;
+    background-color: yellow;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-container form {
+    flex: 2;
+}
+
+.form-padding {
+    background-color: #a09d9d;
+    height: 20em;
+    margin: 0px 30px;
+    padding: 0.5px;
+}
+
+.form-container .form-info {
+    flex: 2;
+}
+
+.form-info .location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 40%;
+}
+
+.form-info .location i {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.phone i {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+.phone p {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.email i {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+.email p {
+    font-size: large;
+    text-decoration: underline;
+}
+
+.question {
+    margin-top: 2em;
+    font-weight: 600;
+}
+
+.insta-feed {
+    margin-top: 4em;
+}
