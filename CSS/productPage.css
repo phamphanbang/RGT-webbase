@@ -1,0 +1,15 @@
+@import './constants.css';
+@import './component/general.css';
+@import './component/header.css';
+@import './component/main.css';
+@import './component/brand.css';
+@import './component/insta-feed.css';
+@import './component/social-banner.css';
+@import './component/footer.css';
+@import './component/footer-bottom.css';
+
+
+.banner-left {
+    flex: 1;
+    margin-bottom: 2em;
+}
