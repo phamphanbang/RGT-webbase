@@ -13,3 +13,34 @@
     flex: 1;
     margin-bottom: 2em;
 }
+
+.menu-box {
+    margin-bottom: 2em;
+}
+
+.option-box {
+    background-color: #9eeafd;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 0em;
+    color: #a0a0a0;
+}
+
+.from-to , .back {
+    display: flex;
+    align-items: center;
+}
+
+.from-to i , .back i {
+    margin-top: 3px;;
+    padding: 0px 0.75em;
+}
+
+.to {
+    padding: 0.5em;
+    background-color: yellow;
+}
