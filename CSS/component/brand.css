@@ -1,0 +1,28 @@
+@import './constants.css';
+
+.brand {
+    padding: 0% 10%;
+    
+}
+
+.brand-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0em;
+}
+
+.brand-holder {
+    height: 3em;
+    width: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-holder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}

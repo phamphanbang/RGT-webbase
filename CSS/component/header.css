@@ -1,0 +1,225 @@
+@import './constants.css';
+
+.container {
+    display: inline-block;
+    
+}
+
+.header {
+    background: url(../../resource/logo/1.jpg) no-repeat center top;
+    background-position: center;
+    background-size: 100%;
+    padding: 0% 9%;
+}
+
+.header-top {
+    padding-top: 2em;
+    padding-bottom: 3em;
+    display: inline-block;
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    margin-left: 3em;
+}
+
+.header-right {
+    float: right;
+    margin-top: 3em;
+    width: 30%;
+}
+
+.social {
+    list-style: none;
+    float: left;
+    padding-left: 3em;
+}
+
+ul.social li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.social li i {
+    color: var(--color-black);
+}
+
+
+
+/*-------#BANNER-----------*/
+.banner {
+    display: inline-block;
+}
+
+.banner-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+/*---#BANNER-LEFT---*/
+.banner-left {
+    float: left;
+    width: 20%;
+}
+
+.login {
+    list-style: none;
+    display: block;
+    background-color: #f8f8f8;
+    margin-bottom: 0px;
+    padding: 0px 10%;
+}
+
+ul.login li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.login li a {
+    color: var(--color-orange);
+}
+
+.cart {
+    background-color: var(--color-orange);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.cart-description {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul.cart-description li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.cart-control {
+    display: inline-block;
+    text-align: center;
+    margin: 0px;
+    padding-right: 1em;
+}
+
+.quick-access {
+    list-style: none;
+    display: flex;
+    background-color: var(--color-darker-orange);
+    margin-bottom: 0px;
+    padding: 0px 0%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+ul.quick-access li {
+    display: inline-block;
+    padding: 10px;
+}
+
+ul.quick-access li a {
+    color: white;
+}
+
+.search {
+    display: flex;
+}
+
+.inp-text {
+    width: 87%;
+    border: none;
+    padding-top: 5px;
+    padding: 5px 5px 5px 10px;
+}
+
+.inp-text:focus {
+    outline: none;
+}
+
+.inp-submit {
+    border: none;
+    border-radius: 0%;
+    width: 13%;
+    padding: inherit;
+    background-color: var(--color-black);
+}
+
+
+.welcome-box {
+    background-color: var(--color-yellow);
+    margin-top: 1em;
+    padding: 4em 8%;
+    text-align: justify;
+    font-weight: 800;
+}
+
+.welcome-box h2 {
+    margin-bottom: 1em;
+}
+/*----------------#BANNER-RIGHT-----------------*/
+
+.banner-right {
+    color: var(--color-yellow);
+    width: 40%;
+    margin-top: 3em;
+    margin-top: 5em;
+    margin-left: 10em;
+    padding-left: 7em;
+}
+
+.banner-right h1 {
+    font-weight: 900;
+    font-size: xxx-large;
+}
+
+.banner-right a {
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
+    font-weight: 600;
+    margin-top: 3em;
+    padding: 10px 20px;
+}
+
+.slide-button {
+    display: flex;
+    align-items: center;
+}
+
+.slide-button a {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    border-radius: 0%;
+    border-color: white;
+    background-color: white;
+    color: var(--color-black);
+}
+
+.slide-control {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-navigation {
+    margin: 0px 1em;
+}
+
+.slide-navigation a {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: yellow;
+    text-indent: -9999px;
+    margin-bottom: 2em;
+}
+
+.slide-navigation .activate {
+    background-color: var(--color-orange) !important;
+}

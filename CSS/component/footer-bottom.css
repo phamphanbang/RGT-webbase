@@ -1,0 +1,20 @@
+@import './constants.css';
+
+.footer-bottom {
+    background-color: #232121;
+    color: white;
+    padding: 0.5em 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icon {
+    display: flex;
+}
+
+.social-icon a {
+    display: block;
+    color: white;
+    padding: 0px 10px;
+}
