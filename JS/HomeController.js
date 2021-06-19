@@ -62,26 +62,6 @@ let renderAllProduct = () => {
 
 renderAllProduct();
 
-// $(document).ready(function () {
-//     $(".add-to-cart").click(function () {
-//         console.log("activate");
-//         let id = $(this).closest('.item-hover').attr('id');
-//         let item = allData.find(i => i.id == id);
-//         var cart = JSON.parse(localStorage.getItem("cart"));
-//         if(cart == null) cart = [];
-//         let temp = cart.find(i => i.id == id);
-//         let count = temp ? temp.id : 1;
-//         var addToCart = {
-//             "id" : item.id,
-//             "product_name" : item.product_name,
-//             "product_price" : item.product_price,
-//             "count" : count
-//         }
-//         cart.push(addToCart);
-//         console.log(cart);
-//         localStorage.setItem("cart",JSON.stringify(cart));
-//     });
-// });
 
 // $(document).on('click','.add-to-cart',function () {
 //     $(".add-to-cart").click(function () {
