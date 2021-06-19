@@ -25,7 +25,7 @@ let renderAllProduct = () => {
                 </div>
             </div>
             <div class="item-hover" id="${item.id}">
-                <a href="#" class="btn" role="button" >
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
                     Detail
                 </a>
                 <button class="btn add-to-cart" >
@@ -42,21 +42,30 @@ let renderAllProduct = () => {
     .then(()=>{
         $(".add-to-cart").click(function () {
             let id = $(this).closest('.item-hover').attr('id');
-            let item = allData.find(i => i.id == id);
+            
             var cart = JSON.parse(localStorage.getItem("cart"));
             if(cart == null) cart = [];
             let temp = cart.find(i => i.id == id);
-            let count = temp ? temp.id : 1;
-            var addToCart = {
-                "id" : item.id,
-                "product_name" : item.product_name,
-                "product_price" : item.product_price,
-                "count" : count
+            if(!temp){
+                let item = allData.find(i => i.id == id);
+                var addToCart = {
+                    "id" : item.id,
+                    "product_name" : item.product_name,
+                    "product_price" : item.product_price,
+                    "count" : 1
+                }
+                cart.push(addToCart);
             }
-            cart.push(addToCart);
+            else {
+                cart.map(i => i.id==id?i.count++:i);
+            }
             console.log(cart);
             localStorage.setItem("cart",JSON.stringify(cart));
         });
+        $(".go-to-detail").click(function () {
+            let id = $(this).closest('.item-hover').attr('id');
+            sessionStorage.setItem("curent-id",id);
+        })
     })
 }
 
