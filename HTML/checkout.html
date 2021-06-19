@@ -233,7 +233,151 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="form-info">
+                    <div class="shipping">
+                        <div class="form-info-header">
+                            <p>
+                                YOUR SHOPPING INFORMATION
+                            </p>
+                        </div>
+                        <div class="shipping-form">
+                            <div class="shipping-form-left">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">EMAIL*</label>
+                                    <input type="email" class="form-control" id="email" placeholder="e.g name@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fullname" class="form-label">FULL NAME*</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="first name">
+                                    <input type="text" class="form-control" id="sname" placeholder="surname">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="company" class="form-label">COMPANY</label>
+                                    <input type="text" class="form-control" id="company" placeholder="e.g your company (optional)">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">ADDRESS*</label>
+                                    <input type="text" class="form-control" id="address1" placeholder="address line 1">
+                                    <input type="text" class="form-control" id="address2" placeholder="address line 2">
+                                </div>
+                                <div class="form-check bottom-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      BILLING ADDRESS SAME AS SHIPPING
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="shipping-form-right">
+                                <div class="mb-3">
+                                    <label for="code" class="form-label">POSTAL CODE*</label>
+                                    <input type="text" class="form-control" id="code" placeholder="e.g 200100">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">TOWN/CITY*</label>
+                                    <input type="text" class="form-control" id="city" placeholder="e.g Los Angles">
+                                </div>
+                                <div class="input-group mb-3 label-select">
+                                    <label for="state" class="form-label">STATE/CONTRY*</label>
+                                    <select class="form-select" id="inputGroupSelect01" style="width:100%">
+                                      <option selected>select</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="input-group mb-3 label-select">
+                                    <label for="province" class="form-label">PROVINCE*</label>
+                                    <select class="form-select" id="inputGroupSelect01" style="width:100%">
+                                      <option selected>select</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mobile" class="form-label">MOBILE*</label>
+                                    <div class="input-group">
+                                        <select class="form-select" id="inputGroupSelect01">
+                                          <option selected>+39</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                        <input type="text" class="form-control" id="mobile" placeholder="phone">
+                                    </div>
+                                </div>
+                                <div class="form-check bottom-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                      REMEMBER THIS ADDRESS NEXT TIME
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <div class="form-info-header">
+                            <p>
+                                YOUR PAYMENT DETAILS
+                            </p>
+                        </div>
+                        <div class="payment-form">
+                            <div class="mb-3">
+                                <label for="credit-card" class="form-label">CREDIT CARD NUMBER*</label>
+                                <input type="text" class="form-control" id="code" placeholder="input your credit card number">
+                            </div>
+                            <div class="credit-card-container">
+                                <div class="credit-card-holder">
+                                    <img src="../resource/logo/Master-Card-Blue-icon.png" alt="">
+                                </div>
+                                <div class="credit-card-holder">
+                                    <img src="../resource/logo/Master-Card-Blue-icon.png" alt="">
+                                </div>
+                                <div class="credit-card-holder">
+                                    <img src="../resource/logo/Master-Card-Blue-icon.png" alt="">
+                                </div>
+                                <div class="credit-card-holder">
+                                    <img src="../resource/logo/Master-Card-Blue-icon.png" alt="">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ex-date" class="form-label">EXOIRATION DATE*</label>
+                                <div class="input-group ">
+                                    <select class="form-select" id="inputGroupSelect01">
+                                      <option selected>01 - january</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                    <select class="form-select" id="inputGroupSelect01">
+                                        <option selected>2018</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="secured code" class="form-label">SECURED CODE*</label>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" id="code" placeholder="000">
+                                    <button class="btn ">What is this ?</button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name-of-card" class="form-label">NAME OF CARD*</label>
+                                <input type="text" class="form-control" id="code" placeholder="name on card">
+                            </div>
+                            <p class="out-of-name">We value your privacy</p>
+                            <div class="form-check bottom-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">
+                                  REMEMBER THIS CARD INFO NEXT TIME
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

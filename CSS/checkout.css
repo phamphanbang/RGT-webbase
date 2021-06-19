@@ -169,3 +169,88 @@
     border-bottom: none;
 }
 
+
+.form-info {
+    display: flex;
+}
+
+.form-info .mb-3 {
+    margin-top: 1em;
+}
+
+.shipping {
+    flex: 2;
+}
+
+.form-info-header {
+    font-size: larger;
+    font-weight: 700;
+    padding: 2em 0em 3em;
+}
+
+.shipping-form {
+    display: flex;
+}
+
+.shipping-form-right , .shipping-form-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shipping-form-right {
+    margin: 0em 1em;
+}
+
+.label-select {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bottom-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.bottom-check input {
+    background-color: aqua;
+    padding: 1em;
+    margin-right: 1em;
+    border: none;
+    border-radius: 0px;
+}
+
+
+
+.bottom-check input:checked {
+    background-color: #0de1fd;
+}
+
+.payment {
+    flex: 1;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.payment-form .bottom-check {
+    margin-top: 0em;
+}
+
+.payment-form p {
+    margin-top: 5em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.credit-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
