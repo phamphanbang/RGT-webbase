@@ -1,0 +1,227 @@
+@import './constants.css';
+@import './component/general.css';
+@import './component/header.css';
+@import './component/main.css';
+@import './component/brand.css';
+@import './component/insta-feed.css';
+@import './component/social-banner.css';
+@import './component/footer.css';
+@import './component/footer-bottom.css';
+
+
+.banner-left {
+    flex: 1;
+    margin-bottom: 2em;
+}
+
+.menu-box {
+    margin-bottom: 2em;
+}
+
+.option-box {
+    background-color: #9eeafd;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em 0em;
+    color: #a0a0a0;
+}
+
+.from-to , .back {
+    display: flex;
+    align-items: center;
+}
+
+.from-to i , .back i {
+    margin-top: 3px;;
+    padding: 0px 0.75em;
+}
+
+.to {
+    padding: 0.5em;
+    background-color: yellow;
+}
+
+.detail-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-product-top {
+    display: flex;
+}
+
+.detail-product-top-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1.5;
+}
+
+.d-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.d-img-holder {
+    padding: 3px;
+}
+
+.d-img-holder img {
+    max-width: 100%;
+    width: 22em;
+    height: 10em;
+}
+
+.d-bottom-controller button {
+    font-size: 2em;
+    padding: 1px;
+}
+
+
+.detail-product-top-right {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding-left: 3em;
+}
+
+.d-title-review {
+    display: flex;
+    align-items: center;
+}
+
+.d-title-review p {
+    padding-left: 1em;
+}
+
+
+.dptr-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    padding-left: 0em;
+}
+
+.dptr-price .price {
+    font-size: 2em;
+}
+
+.dptr-padding {
+    background-color: #bdbcbc;
+    width: 80%;
+    height: 1px;
+    margin-left: 10%;
+    margin-bottom: 3px;
+}
+
+.dptr-overview {
+    text-align: justify;
+    padding: 1em 0em;
+}
+
+.dptr-size {
+    padding: 1em 0em;
+}
+
+.dptr-size h4 {
+    padding-bottom: 0.5em;
+}
+
+.dptr-size button {
+    margin-right: 1em;
+}
+
+.dptr-checkout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dptr-checkout-quantity {
+    flex: 1;
+}
+
+.dptr-checkout-button {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dptr-checkout-button button {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+    padding: 1em;
+}
+
+.dptr-checkout-option {
+    flex: 2;
+}
+.dptr-checkout-option button {
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+    color: black;
+}
+
+.detail-product-bottom {
+    margin: 3em 0em;
+}
+
+.detail-product-bottom .btn-group {
+    margin-left: 1em;
+}
+
+.detail-product-bottom .btn-group button {
+    color: black;
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+    border-radius: 0px;
+    padding: 1em;
+}
+
+.detail-product-bottom .btn-group .dpb-teal {
+    background-color:#26d2fc;
+    border-color: #26d2fc;
+}
+
+.dpb-textbox {
+    padding: 1em;
+    border: 1px solid #b7b3b3;
+}
+
+.insta-feed {
+    margin-top: 4em;
+}
+
+.product-controller {
+    display: flex;
+    margin: 1em 0em;
+}
+
+.product-controller .input-group {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.product-controller .input-group button {
+    border: none;
+    padding: 0.5em;
+}
+
+.product-controller .input-group p {
+    margin: 0em 0.5em;
+}
+
+.product-controller .input-group:nth-child(1) p {
+    margin-left: 0em;
+} 
+
+.product-controller .input-group .after-option {
+    margin-left: 0.5em;
+}
