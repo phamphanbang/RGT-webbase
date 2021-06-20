@@ -61,6 +61,7 @@ let renderAllProduct = () => {
             }
             console.log(cart);
             localStorage.setItem("cart",JSON.stringify(cart));
+            alert("Product added !");
         });
         $(".go-to-detail").click(function () {
             let id = $(this).closest('.item-hover').attr('id');

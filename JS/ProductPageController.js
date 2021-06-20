@@ -38,6 +38,7 @@ let renderProduct = () => {
             }
             console.log(cart);
             localStorage.setItem("cart",JSON.stringify(cart));
+            alert("Product added !")
         });
         
     })
