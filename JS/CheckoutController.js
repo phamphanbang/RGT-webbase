@@ -1,22 +1,62 @@
 $(document).ready(function () {
-    console.log("init this shit")
-    $("#shipping-valid").validate({
-		onfocusout: true,
-		onkeyup: true,
-		onclick: true,
-		rules: {
-			"email": {
-				required: true,
-				maxlength: 15
-			},
-			"fname": {
-				required: true,
-				minlength: 8
-			},
-			"sname": {
-				equalTo: true,
-				minlength: 8
+    // $("#shipping-email").on("change", function () {
+	// 	console.log(this.value)
+	// });
+	$().ready(function() {
+		$("#form-validate").validate({
+			debug:true,			
+			rules: {
+				"email": {
+					required: true,
+					email : true
+				},
+				"fname": {
+					required: true,
+				},
+				"sname": {
+					required: true,
+				},
+				"company": {
+					required: true,
+				},
+				"address1": {
+					required: true,
+				},
+				"address2": {
+					required: true,
+				},
+				"postalCode": {
+					required: true,
+				},
+				"city": {
+					required: true,
+				},
+				"mobile": {
+					required: true,
+				},
+				"credit-card": {
+					required: true,
+				},
+				"secured-code": {
+					required: true,
+				},
+				"name-of-card": {
+					required: true,
+				},
+				"state":{
+					required:true,
+				},
+				"province" : {
+					required:true
+				},
+				"day-month" : {
+					required: true,
+				},
+				"year":{
+					required: true
+				}
 			}
-		}
+			
+		});
 	});
 });

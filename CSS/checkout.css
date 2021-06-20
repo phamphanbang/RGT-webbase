@@ -172,6 +172,11 @@
 
 .form-info {
     display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
 }
 
 .form-info .mb-3 {
@@ -253,4 +258,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.form-submit p {
+    flex: 2;
+}
+
+.button-holder {
+    flex: 1;
+}
+
+.button-holder button {
+    height: 3em;
+    width: 70%;
+    margin-left: 15%;
 }
