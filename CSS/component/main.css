@@ -11,6 +11,9 @@
     
 }
 
+.row .col-xl-9 {
+    background-color: #f1f1f1;
+}
 
 .menu-box h3 {
     padding: 1em 3em 1em 1em;
@@ -29,6 +32,11 @@
     display: block;
     background-color: var(--color-teal);
     padding: 0.60em;
+}
+
+.menu-item:hover {
+    background-color: var(--color-black);
+    color: white;
 }
 
 .ads {
@@ -94,6 +102,14 @@
     margin-bottom: 0.5em;
 }
 
+.tags-link:hover , .tags-expand:hover {
+    color: orangered;
+}
+
+.tags-btn:hover {
+    background-color: orangered;
+}
+
 /*-------#PRODUCT-----------*/
 
 
@@ -138,6 +154,11 @@
     justify-content: space-between;
     font-weight: bold;
     margin: 0.5em 0em 0em;
+}
+
+.product-description p {
+    overflow: hidden;
+    text-overflow: clip;
 }
 
 .on-sale {

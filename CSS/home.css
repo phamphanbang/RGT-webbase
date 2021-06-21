@@ -8,4 +8,11 @@
 @import './component/footer.css';
 @import './component/footer-bottom.css';
 
+.header {
+    margin-bottom: -2em;
+    padding-bottom: 5%;
+}
 
+.row .col-xl-9 {
+    background-color: #f1f1f1;
+}

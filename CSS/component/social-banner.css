@@ -16,6 +16,10 @@
     color: white;
 }
 
+.social-banner-holder:hover {
+    color: rgb(80, 80, 241);
+}
+
 .social-banner-holder i{
     padding: 10%;
 }

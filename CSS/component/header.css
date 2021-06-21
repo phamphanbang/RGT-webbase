@@ -38,13 +38,22 @@
 
 ul.social li {
     display: inline-block;
-    padding: 10px;
+    padding: 5px 10px;
+}
+
+ul.social li:hover {
+    background-color: var(--color-orange);
 }
 
 ul.social li i {
     color: var(--color-black);
 }
 
+.lang select {
+    background-color: rgb(76 175 80 / 0%);
+    border-color:  rgb(76 175 80 / 0%);;
+    padding-right: 27px;
+}
 
 
 /*-------#BANNER-----------*/
@@ -107,6 +116,10 @@ ul.cart-control {
     padding-right: 1em;
 }
 
+ul.cart-control a:hover {
+    color: yellow;
+}
+
 .quick-access {
     list-style: none;
     display: flex;
@@ -150,6 +163,10 @@ ul.quick-access li a {
     background-color: var(--color-black);
 }
 
+.inp-submit:hover {
+    background-color: var(--color-orange);
+    border-color: orangered;
+}
 
 .welcome-box {
     background-color: var(--color-yellow);
@@ -187,6 +204,11 @@ ul.quick-access li a {
     padding: 10px 20px;
 }
 
+.banner-right a:hover {
+    background-color: var(--color-orange);
+    border-color: orangered;
+}
+
 .slide-button {
     display: flex;
     align-items: center;
@@ -200,6 +222,11 @@ ul.quick-access li a {
     border-color: white;
     background-color: white;
     color: var(--color-black);
+}
+
+.slide-button a:hover {
+    background-color: var(--color-orange);
+    border-color: orangered;
 }
 
 .slide-control {
