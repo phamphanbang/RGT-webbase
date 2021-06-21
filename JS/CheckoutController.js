@@ -5,7 +5,17 @@ $(document).ready(function () {
 	$().ready(function() {
 		$("#form-validate").validate({
 			debug:true,	
-			success : "valid",		
+			success : "valid",
+			groups: {
+				time: "day-month year"
+			  },
+			  errorPlacement: function(error, element) {
+				if (element.attr("name") == "year" || element.attr("name") == "day-month" ) {
+				  error.insertAfter("#year");
+				} else {
+				  error.insertAfter(element);
+				}
+			  },		
 			rules: {
 				"email": {
 					required: true,

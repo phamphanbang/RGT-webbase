@@ -6,7 +6,7 @@
 }
 
 .header {
-    background: url(../../resource/logo/1.jpg) no-repeat center top;
+    background: url("https://picsum.photos/1000/800") no-repeat center top;
     background-position: center;
     background-size: 100%;
     padding: 0% 9%;

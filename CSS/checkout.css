@@ -8,6 +8,10 @@
 @import './component/footer.css';
 @import './component/footer-bottom.css';
 
+.header {
+    margin-bottom: -8%;
+    padding-bottom: 10%;
+}
 
 .banner-left {
     flex: 1;
