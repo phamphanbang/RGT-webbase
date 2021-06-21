@@ -3,17 +3,40 @@ $(document).ready(function () {
 	// 	console.log(this.value)
 	// });
 	$().ready(function() {
+		$("#login-form").validate({
+			debug: true,
+			rules:{
+				"mid-email" : {
+					required: true
+				},
+				"password": {
+					required: true
+				}
+			}
+		});
+
 		$("#form-validate").validate({
 			debug:true,	
 			success : "valid",
+			errorElement: "div",
 			groups: {
-				time: "day-month year"
+				time: "year day-month",
+				fullname : "fname sname",
+				addr : "address1 address2"
 			  },
 			  errorPlacement: function(error, element) {
 				if (element.attr("name") == "year" || element.attr("name") == "day-month" ) {
-				  error.insertAfter("#year");
-				} else {
-				  error.insertAfter(element);
+				  error.insertAfter("#check");
+				  console.log("time" + JSON.stringify(element.attr("id")));
+				} 
+				if (element.attr("name") == "fname" || element.attr("name") == "sname" ) {
+					error.insertAfter("#sname");
+				} 
+				if (element.attr("name") == "address1" || element.attr("name") == "address2" ) {
+					error.insertAfter("#address2");
+				} 
+				else {
+					error.insertAfter(element);
 				}
 			  },		
 			rules: {

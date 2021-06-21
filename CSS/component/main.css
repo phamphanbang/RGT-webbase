@@ -32,6 +32,7 @@
     display: block;
     background-color: var(--color-teal);
     padding: 0.60em;
+    font-weight: 700;
 }
 
 .menu-item:hover {

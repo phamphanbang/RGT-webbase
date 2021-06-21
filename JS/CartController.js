@@ -52,7 +52,7 @@ let renderCart = () => {
                 <button class="btn decrease-count ${item.count==1?"disabled":""}" type="button">
                     <i class="fas fa-chevron-left "></i>
                 </button>
-                <input type="number" class="form-control item-count" value="${item.count}" >
+                <input type="number" class="form-control item-count" name="item-count" id="item-count" min="1" value="${item.count}" >
                 <button class="btn increase-count" type="button">
                     <i class="fas fa-chevron-right "></i>
                 </button>
@@ -121,6 +121,27 @@ let renderCart = () => {
                 localStorage.setItem("cart",JSON.stringify(cart));
             }
         }
+    });
+    $(".item-count").change(function (e) { 
+        let id = $(this).closest('.cart-row').attr('id');
+        
+        let item = cart.find(i => i.id ==id);
+        let newCount =parseInt($(this).val());
+        console.log(newCount);
+        let subPriceId = "#subtotal-price-" + item.id.toString();
+        
+        $(subPriceId).text((item.product_price * newCount).toString());
+        let newItem = {
+            "id" : item.id,
+            "product_name" : item.product_name,
+            "product_price" : item.product_price,
+            "count" : newCount
+        }
+        if(newCount>1) $(this).siblings(".decrease-count").removeClass("disabled");
+        if(newCount<=1) $(this).siblings(".decrease-count").addClass("disabled");
+        cart = cart.map(i => i.id==id?newItem:i);
+        localStorage.setItem("cart",JSON.stringify(cart));
+        console.log(cart);
     });
     $(".item-delete").click(function (e) { 
         let id = $(this).closest('.cart-row').attr('id');

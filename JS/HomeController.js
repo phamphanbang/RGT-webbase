@@ -35,8 +35,6 @@ let renderAllProduct = () => {
             </div>
             `     
         }).join("");
-        //document.querySelector('#main-product')
-        //        .insertAdjacentHTML("afterbegin",html)
         $("#main-product").append(html);
 
         const subHtml = data.slice(0,3).map(item => {
@@ -127,30 +125,6 @@ let renderAllProduct = () => {
 
 renderAllProduct();
 
-
-
-// $(document).on('click','.add-to-cart',function () {
-//     $(".add-to-cart").click(function () {
-//         console.log("activate");
-//         console.log(allData);
-//         let id = $(this).closest('.item-hover').attr('id');
-//         let item = allData.find(i => i.id == id);
-//         console.log(item , "  " , id);
-//         var cart = JSON.parse(localStorage.getItem("cart"));
-//         if(cart == null) cart = [];
-//         let temp = cart.find(i => i.id == id);
-//         let count = temp ? temp.id : 1;
-//         var addToCart = {
-//             "id" : item.id,
-//             "product_name" : item.product_name,
-//             "product_price" : item.product_price,
-//             "count" : count
-//         }
-//         cart.push(addToCart);
-//         console.log(cart);
-//         localStorage.setItem("cart",JSON.stringify(cart));
-//     });
-// });
 
 
 

@@ -62,7 +62,7 @@
                         <li>
                             <div class="input-group lang" >
                                 <select class="form-select" id="inputGroupSelect01">
-                                  <option value="">lang</option>
+                                  <option value="">EN</option>
                                   <option value="1">One</option>
                                   <option value="2">Two</option>
                                   <option value="3">Three</option>
@@ -188,7 +188,7 @@
                         </ul>
                         <button class="btn btn-dark">FILL THE SIGN FORM</button>
                     </div>
-                    <div class="checkout-middle">
+                    <form class="checkout-middle" id="login-form">
                         <div class="checkout-title">
                             <h3>
                                 ARE YOU A 
@@ -204,19 +204,19 @@
                             Please log in below
                         </p>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email Address<p class="red">*</p></label>
-                            <input type="email" class="form-control" >
+                            <label for="mid-email" class="form-label">Email Address<p class="red">*</p></label>
+                            <input type="email" name="mid-email" id="mid-email" class="form-control" >
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Password<p class="red">*</p></label>
-                            <input type="password" class="form-control" id="inputPassword">
+                            <input type="password" class="form-control" id="password" name="password">
                         </div>
                         <div class="checkout-middle-reminder">
                             <p class="red">* Required Fields</p>
                             <button class="btn btn-light">Forgot your password?</button>
                         </div>
-                        <button class="btn btn-dark">LOGIN</button>
-                    </div>
+                        <button class="btn btn-dark" type="submit">LOGIN</button>
+                    </form>
                     <div class="checkout-right">
                         <div class="cart-review">
                             <h5>REVIEW YOURS CART</h5>
@@ -362,7 +362,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="ex-date" class="form-label">EXOIRATION DATE*</label>
-                                    <div class="input-group ">
+                                    <div class="input-group " id="check">
                                         <select class="form-select" id="day-month" name="day-month">
                                           <option value="">day - month</option>
                                           <option value="1">One</option>
