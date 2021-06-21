@@ -8,7 +8,7 @@
     padding-right: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
 }
 
 
@@ -33,6 +33,7 @@
 
 .ads {
     position: relative;
+    margin: 1em 0em;
 }
 
 .img-holder img{

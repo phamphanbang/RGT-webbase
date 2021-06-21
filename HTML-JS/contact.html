@@ -111,23 +111,26 @@
                     <form id="thisIsAForm">
                         <div class="mb-3">
                           <label for="fullname" class="form-label">FULL NAME*</label>
-                          <input type="text" class="form-control" id="fullname" placeholder="e.g Robert Smith">
+                          <input type="text" class="form-control" id="fullname" name="fullname" placeholder="e.g Robert Smith">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">EMAIL*</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="e.g name@home.com">
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="e.g name@home.com">
                         </div>
                         <div class="mb-3">
                             <label for="company" class="form-label">COMPANY*</label>
-                            <input type="text" class="form-control" id="company" placeholder="e.g your company(optional)">
+                            <input type="text" class="form-control" id="company" name="company" placeholder="e.g your company(optional)">
                         </div>
                         <div class="mb-3">
                             <label for="subject" class="form-label">SUBJECT*</label>
-                            <input type="text" class="form-control" id="subject" placeholder="e.g info">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="e.g info">
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">MESSAGE</label>
                             <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-dark" type="submit" >SEND</button>
                         </div>
                     </form>
                     <div class="form-padding">
@@ -285,9 +288,7 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-        crossorigin="anonymous"></script>
+    
 </body>
 
 </html>

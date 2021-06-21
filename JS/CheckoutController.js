@@ -4,7 +4,8 @@ $(document).ready(function () {
 	// });
 	$().ready(function() {
 		$("#form-validate").validate({
-			debug:true,			
+			debug:true,	
+			success : "valid",		
 			rules: {
 				"email": {
 					required: true,
