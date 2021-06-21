@@ -61,7 +61,7 @@ let renderCart = () => {
         <div class="col-2">
             <div class="cart-product-subtotal">
                 <i class="fas fa-euro-sign"></i>
-                <p>${item.product_price * item.count}</p>
+                <p id="subtotal-price-${item.id}">${item.product_price * item.count}</p>
                 <button class="btn item-delete" type="button">
                     <i class="fas fa-times "></i>
                 </button>
@@ -70,13 +70,15 @@ let renderCart = () => {
         </div>
     </div>`
     }).join("");
-    $(".cart-container").after(html);
+    $(".cart-container").prepend(html);
     $(".increase-count").click(function (e) { 
         let id = $(this).closest('.cart-row').attr('id');
-        console.log(id);
+        
         let item = cart.find(i => i.id ==id);
-        console.log(item);
         $(this).siblings(".item-count").val((++item.count).toString());
+        let subPriceId = "#subtotal-price-" + item.id.toString();
+        
+        $(subPriceId).text((item.product_price * item.count).toString());
         let newItem = {
             "id" : item.id,
             "product_name" : item.product_name,
@@ -91,9 +93,13 @@ let renderCart = () => {
         let id = $(this).closest('.cart-row').attr('id');
         console.log(id);
         let item = cart.find(i => i.id ==id);
+        
         console.log(item);
         if(item.count > 1) {
             $(this).siblings(".item-count").val((--item.count).toString());
+            let subPriceId = "#subtotal-price-" + item.id.toString();
+        
+            $(subPriceId).text((item.product_price * item.count).toString());
             let newItem = {
                 "id" : item.id,
                 "product_name" : item.product_name,
@@ -107,8 +113,10 @@ let renderCart = () => {
         else if (item.count <= 1) {
             let check = confirm("Do you want to remove this item from cart ?");
             if (check){
-                let removeId = "#" + item.id.toString();
+                let removeId = "#" + id.toString();
+                cart = cart.filter(i => i.id != id);
                 $(removeId).remove();
+                localStorage.setItem("cart",JSON.stringify(cart));
             }
         }
     });
@@ -117,7 +125,9 @@ let renderCart = () => {
         let check = confirm("Do you want to remove this item from cart ?");
         if (check){
             let removeId = "#" + id.toString();
+            cart = cart.filter(i => i.id != id);
             $(removeId).remove();
+            localStorage.setItem("cart",JSON.stringify(cart));
         }
     });
 }
