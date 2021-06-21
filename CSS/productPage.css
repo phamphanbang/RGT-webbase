@@ -152,10 +152,18 @@
     justify-content: center;
 }
 
+
+
 .dptr-checkout-button button {
     background-color: var(--color-orange);
     border-color: var(--color-orange);
     padding: 1em;
+}
+
+.dptr-checkout-button button:hover {
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
 }
 
 .dptr-checkout-option {
@@ -164,6 +172,12 @@
 .dptr-checkout-option button {
     background-color: #f1f1f1;
     border-color: #f1f1f1;
+    color: black;
+}
+
+.dptr-checkout-option button:hover {
+    background-color: yellow;
+    border-color: yellow;
     color: black;
 }
 

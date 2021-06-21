@@ -4,6 +4,10 @@
     background-color: var(--color-black);
 }
 
+.footer a:hover {
+    color: orange;
+}
+
 .footer-container {
     margin: 0px 10%;
     display: flex;

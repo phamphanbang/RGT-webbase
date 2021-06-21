@@ -46,13 +46,14 @@ ul.social li:hover {
 }
 
 ul.social li i {
-    color: var(--color-black);
+    color: white;
 }
 
 .lang select {
     background-color: rgb(76 175 80 / 0%);
     border-color:  rgb(76 175 80 / 0%);;
     padding-right: 27px;
+    color: white;
 }
 
 

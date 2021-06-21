@@ -17,6 +17,59 @@ let renderProduct = () => {
         $(".dptr-title").after('<h3>'+item.product_name+'</h3>')
         $(".price").append('<i class="fas fa-euro-sign"></i>'+item.product_price);
         $(".price-detail").append('<p>Product code : '+item.id +'<br>Availability : In Stock </p>')
+        $(".to").text(item.product_name);
+
+        const subHtml = data.slice(0,3).map(item => {
+            return `
+            <div class="product-item" >
+            <div class="product-img">
+                <img src="https://picsum.photos/300/340" alt=""
+                    class="figure-img img-fluid ">
+            </div>
+            <div class="product-description">
+                <p>${item.product_name}</p>
+                <div class="product-price">
+                    $${item.product_price}
+                </div>
+            </div>
+            <div class="item-hover" id="${item.id}">
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
+                    Detail
+                </a>
+                <button class="btn add-to-cart" >
+                    Add to cart
+                </button>
+            </div>
+            </div>
+            `     
+        }).join("");
+        $("#also-like").append(subHtml);
+
+        const subHtml2 = data.slice(-3).map(item => {
+            return `
+            <div class="product-item" >
+            <div class="product-img">
+                <img src="https://picsum.photos/300/340" alt=""
+                    class="figure-img img-fluid ">
+            </div>
+            <div class="product-description">
+                <p>${item.product_name}</p>
+                <div class="product-price">
+                    $${item.product_price}
+                </div>
+            </div>
+            <div class="item-hover" id="${item.id}">
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
+                    Detail
+                </a>
+                <button class="btn add-to-cart" >
+                    Add to cart
+                </button>
+            </div>
+            </div>
+            `     
+        }).join("");
+        $("#recently-viewed").append(subHtml2);
     })
     .then(()=>{
         
@@ -40,7 +93,10 @@ let renderProduct = () => {
             localStorage.setItem("cart",JSON.stringify(cart));
             alert("Product added !")
         });
-        
+        $(".go-to-detail").click(function () {
+            let id = $(this).closest('.item-hover').attr('id');
+            sessionStorage.setItem("curent-id",id);
+        })
     })
 }
 

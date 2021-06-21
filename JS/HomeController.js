@@ -38,6 +38,59 @@ let renderAllProduct = () => {
         //document.querySelector('#main-product')
         //        .insertAdjacentHTML("afterbegin",html)
         $("#main-product").append(html);
+
+        const subHtml = data.slice(0,3).map(item => {
+            return `
+            <div class="product-item" >
+            <div class="product-img">
+                <img src="https://picsum.photos/300/340" alt=""
+                    class="figure-img img-fluid ">
+            </div>
+            <div class="product-description">
+                <p>${item.product_name}</p>
+                <div class="product-price">
+                    $${item.product_price}
+                </div>
+            </div>
+            <div class="item-hover" id="${item.id}">
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
+                    Detail
+                </a>
+                <button class="btn add-to-cart" >
+                    Add to cart
+                </button>
+            </div>
+            </div>
+            `     
+        }).join("");
+        $("#top-products").append(subHtml);
+
+        const subHtml2 = data.slice(-3).map(item => {
+            return `
+            <div class="product-item" >
+            <div class="product-img">
+                <img src="https://picsum.photos/300/340" alt=""
+                    class="figure-img img-fluid ">
+            </div>
+            <div class="product-description">
+                <p>${item.product_name}</p>
+                <div class="product-price">
+                    $${item.product_price}
+                </div>
+            </div>
+            <div class="item-hover" id="${item.id}">
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
+                    Detail
+                </a>
+                <button class="btn add-to-cart" >
+                    Add to cart
+                </button>
+            </div>
+            </div>
+            `     
+        }).join("");
+        $("#sale-products").append(subHtml2);
+
     })
     .then(()=>{
         $(".add-to-cart").click(function () {
@@ -70,7 +123,10 @@ let renderAllProduct = () => {
     })
 }
 
+
+
 renderAllProduct();
+
 
 
 // $(document).on('click','.add-to-cart',function () {

@@ -9,6 +9,15 @@
 @import './component/footer-bottom.css';
 
 
+.header {
+    padding-bottom: 10%;
+}
+
+.social {
+    background-color: rgb(128 128 128 / 30%);
+    padding-left: 10px;
+}
+
 .banner-left {
     flex: 1;
     margin-bottom: 2em;
@@ -117,3 +126,9 @@
 .error {
     color: red;
 }
+
+.brand {
+    padding: 0px;
+    margin-top: 10%;
+}
+
