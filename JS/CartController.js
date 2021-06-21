@@ -49,7 +49,7 @@ let renderCart = () => {
         </div>
         <div class="col-3">
             <div class="input-group">
-                <button class="btn decrease-count" type="button">
+                <button class="btn decrease-count ${item.count==1?"disabled":""}" type="button">
                     <i class="fas fa-chevron-left "></i>
                 </button>
                 <input type="number" class="form-control item-count" value="${item.count}" >
@@ -85,6 +85,7 @@ let renderCart = () => {
             "product_price" : item.product_price,
             "count" : item.count
         }
+        if(item.count>1) $(this).siblings(".decrease-count").removeClass("disabled");
         cart = cart.map(i => i.id==id?newItem:i);
         localStorage.setItem("cart",JSON.stringify(cart));
         console.log(cart);
@@ -105,7 +106,8 @@ let renderCart = () => {
                 "product_name" : item.product_name,
                 "product_price" : item.product_price,
                 "count" : item.count
-        }
+            }
+            if(item.count==1) $(this).addClass("disabled");
         cart = cart.map(i => i.id==id?newItem:i);
         localStorage.setItem("cart",JSON.stringify(cart));
         console.log(cart);

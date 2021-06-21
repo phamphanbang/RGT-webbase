@@ -112,7 +112,9 @@
 
 /*-------#PRODUCT-----------*/
 
-
+.product {
+    position: relative;
+}
 
 .product-header {
     display: flex;
@@ -159,6 +161,27 @@
 .product-description p {
     overflow: hidden;
     text-overflow: clip;
+}
+
+.pc-left {
+    top: 48%;
+}
+
+.pc-right {
+    top: 46%;
+    right: 0%;
+}
+
+.product-slide button {
+    background-color: yellow;
+    font-size: larger;
+    position: absolute;
+}
+
+
+
+.color-aqua button {
+    background-color: aqua;
 }
 
 .on-sale {
