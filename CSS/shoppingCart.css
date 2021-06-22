@@ -233,3 +233,37 @@
 .sort-by-click .togle {
     display : inline-block;
 }
+
+.product-item-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.product-description-list {
+    flex: 3;
+    display: flex;
+    height: 100%;
+    padding-left: 10%;
+    flex-direction: column;
+}
+
+.view-togle{
+    color: white;
+    background-color: orangered;
+}
+
+.view-by:hover {
+    color: white;
+    background-color: orangered;
+}
+
+.product-img-list {
+    flex:1;
+}
+
+.product-price-list {
+    margin: 3% 0%;
+}
+

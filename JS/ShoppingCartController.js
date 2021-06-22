@@ -74,54 +74,68 @@ let renderAllProduct = () => {
             console.log(1)
             let type = $(this).val().toString();
             let ordBy = $(".togle").attr("name").toString();
-            console.log(type,ordBy);
+            
+            $(".sort-by-select").val(type);
+            let viewBy = $(".view-togle").attr("name").toString();
+            console.log(type,ordBy,viewBy);
             tempData(type,ordBy);
-            Sort();
+            Sort(viewBy);
         });
         $(".sort-by-click").click(function (e) { 
+            $(".sort-by-click > i").toggleClass("togle")
             let type = $(".sort-by-select").val().toString();
             let ordBy = $(".togle").attr("name").toString();
             console.log(2)
+            
+            let viewBy = $(".view-togle").attr("name").toString();
             tempData(type,ordBy);
-            $(".sort-by-click > i").toggleClass("togle")
-            Sort();
+            console.log(type,ordBy,viewBy);
+            Sort(viewBy);
+            
+        });
+        $(".view-by").click(function (e) { 
+            $(".view-by").toggleClass("view-togle");
+            let viewBy = $(this).attr("name").toString();
+            Sort(viewBy);
         });
     })
 }
 
 let tempData = (type,ordBy) => {
-    if (type == "id" && ordBy == "decs") {
+    if (type == "id" && ordBy == "acs") {
         return allData.sort((x,y) => {
             return  ((x.id < y.id) ? -1 : ((x.id > y.id) ? 1 : 0));
         } );}
-    if (type == "id" && ordBy == "acs") {
+    if (type == "id" && ordBy == "decs") {
         return allData.sort((x,y) => {
             return  ((x.id > y.id) ? -1 : ((x.id < y.id) ? 1 : 0));
         });}
-    if (type == "product-name" && ordBy == "decs") {
+    if (type == "product-name" && ordBy == "acs") {
         return allData.sort((x,y) => {
             return  ((x.product_name.toUpperCase() < y.product_name.toUpperCase()) ? -1 : ((x.product_name.toUpperCase() > y.product_name.toUpperCase()) ? 1 : 0));
         });}
-    if (type == "product-name" && ordBy == "acs") {
+    if (type == "product-name" && ordBy == "decs") {
         return allData.sort((x,y) => {
             return  ((x.product_name.toUpperCase() > y.product_name.toUpperCase()) ? -1 : ((x.product_name.toUpperCase() < y.product_name.toUpperCase()) ? 1 : 0));
         });}
     if (type == "product-price" && ordBy == "decs") {
         return allData.sort((x,y) => {
-            return  ((x.product_price < y.product_price) ? -1 : ((x.product_price > y.product_price) ? 1 : 0));
+            return  ((x.product_price > y.product_price) ? -1 : ((x.product_price < y.product_price) ? 1 : 0));
         });}
     if (type == "product-price" && ordBy == "acs") {
         return allData.sort((x,y) => {
-            return  ((x.product_price > y.product_price) ? -1 : ((x.product_price < y.product_price) ? 1 : 0));
+            return  ((x.product_price < y.product_price) ? -1 : ((x.product_price > y.product_price) ? 1 : 0));
         });}
 
 }
 
-let Sort = () => {
+let Sort = (viewBy) => {
     console.log(allData);
     $(".be-removed").remove();
     console.log("???")
-    const html = allData.map(item => {
+    var html = "";
+    if(viewBy == "view-grid") {
+    html = allData.map(item => {
         return `
         <div class="product-item be-removed" >
         <div class="product-img">
@@ -144,7 +158,36 @@ let Sort = () => {
         </div>
         </div>
         `     
-    }).join("");
+    }).join("");}
+    else {
+        html = allData.map(item => {
+            return `
+            <div class="product-item be-removed product-item-list" >
+            <div class="product-img">
+                <img src="https://picsum.photos/300/340" alt=""
+                    class="figure-img img-fluid ">
+            </div>
+            <div class="product-description product-description-list">
+                <p><h3>${item.product_name}</h3></p>
+                <div class="product-price product-price-list">
+                    $${item.product_price}
+                </div>
+                <p>
+                    Description: lorem isum lorem isumlorem isumlorem isumlorem isumlorem isumlorem isumlorem isumlorem isumlorem isumlorem isumlorem isumlorem isumlorem isum
+                </p>
+            </div>
+            <div class="item-hover" id="${item.id}">
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
+                    Detail
+                </a>
+                <button class="btn add-to-cart" >
+                    Add to cart
+                </button>
+            </div>
+            </div>
+            `     
+        }).join("");
+    }
     //document.querySelector('#main-product')
     //        .insertAdjacentHTML("afterbegin",html)
     console.log(123);
