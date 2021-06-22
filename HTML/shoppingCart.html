@@ -215,14 +215,14 @@
                 <div class="product-controller">
                     <div class="input-group">
                         <p>SORT BY</p>
-                        <select class="form-select" id="inputGroupSelect01">
-                          <option selected>Position</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
+                        <select class="form-select sort-by-select" name="sort-by-select" id="sort-by-select">
+                          <option value="id" selected>Id</option>
+                          <option value="product-price">Price</option>
+                          <option value="product-name">Name</option>
                         </select>
-                        <button class="btn btn-outline-secondary" type="button">
-                            <i class="fas fa-arrow-up"></i>
+                        <button class="btn btn-outline-secondary sort-by-click"  type="button">
+                            <i class="fas fa-arrow-up " name="decs"></i>
+                            <i class="fas fa-arrow-down  togle" name="acs"></i>
                         </button>
                         
                     </div>

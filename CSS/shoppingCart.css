@@ -225,3 +225,11 @@
 .product-controller .input-group .after-option {
     margin-left: 0.5em;
 }
+
+.sort-by-click i {
+    display: none;
+}
+
+.sort-by-click .togle {
+    display : inline-block;
+}

@@ -296,3 +296,11 @@
 .error {
     color: red;
 }
+
+.page:hover {
+    color: orangered;
+}
+
+.page-nav .activate {
+    color: orangered;
+}
