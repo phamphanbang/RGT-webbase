@@ -1,6 +1,7 @@
 var cart = [];
 var allData = [];
 var isItemAdded = false;
+var checkout = {};
 
 let itemChange = () => {
     let yourCart = 0;
@@ -187,15 +188,7 @@ let renderCart = () => {
         itemChange();
         isItemAdded = false
     });
-    $("#checkout").click(function (e) { 
-        let checkout = {
-            "yourCart" : $("#your-cart").text(yourCart),
-            "vat" : $("#vat").text(vat),
-            "orderTotal" : $("#order-total").text(orderTotal),
-            "cart" : cart
-        }
-        localStorage.setItem("checkout",JSON.stringify(checkout));
-    });
+    
 }
 
 let renderProduct = () => {
@@ -302,9 +295,27 @@ renderProduct();
 $(".update-cart").click(function (e) {
     let check = confirm("Do you want to update your cart ?");
     if (check){
+        checkout = {
+            "yourCart" : $("#your-cart").text(),
+            "vat" : $("#vat").text(),
+            "orderTotal" : $("#order-total").text(),
+            "cart" : cart
+        }
+        localStorage.setItem("checkout",JSON.stringify(checkout));
         localStorage.setItem("cart",JSON.stringify(cart));
         alert("Your cart is now up-to-date");
     }
     
 });
+
+// $("#checkout").click(function (e) { 
+//     let checkout = {
+//         "yourCart" : $("#your-cart").text(),
+//         "vat" : $("#vat").text(),
+//         "orderTotal" : $("#order-total").text(),
+//         "cart" : cart
+//     }
+//     localStorage.setItem("checkout",JSON.stringify(checkout));
+//     alert("go-to-checkout");
+// });
 

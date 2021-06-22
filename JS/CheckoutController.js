@@ -1,4 +1,4 @@
-var checkout = sessionStorage.getItem("checkout");
+var checkout = JSON.parse(localStorage.getItem("checkout"));
 
 let renderCheckout = () => {
 	if(checkout) {
@@ -8,12 +8,13 @@ let renderCheckout = () => {
 	}
 }
 
-renderCheckout();
+
 
 $(document).ready(function () {
     // $("#shipping-email").on("change", function () {
 	// 	console.log(this.value)
 	// });
+	renderCheckout();
 	$().ready(function() {
 		$("#login-form").validate({
 			debug: true,
