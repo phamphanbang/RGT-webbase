@@ -15,6 +15,11 @@ $(document).ready(function () {
 			}
 		});
 
+		jQuery.validator.addMethod("onlyNumber", function(value, element) {
+			// allow any non-whitespace characters as the host part
+			return this.optional( element ) || /^[0-9]*$/.test( value );
+		}, 'Please enter a valid number.');
+
 		$("#form-validate").validate({
 			debug:true,	
 			success : "valid",
@@ -26,7 +31,7 @@ $(document).ready(function () {
 			  },
 			  errorPlacement: function(error, element) {
 				if (element.attr("name") == "year" || element.attr("name") == "day-month" ) {
-				  error.insertAfter("#check");
+				  error.insertAfter(element.parent("div"));
 				  console.log("time" + JSON.stringify(element.attr("id")));
 				} 
 				if (element.attr("name") == "fname" || element.attr("name") == "sname" ) {
@@ -35,7 +40,34 @@ $(document).ready(function () {
 				if (element.attr("name") == "address1" || element.attr("name") == "address2" ) {
 					error.insertAfter("#address2");
 				} 
-				else {
+				if (element.attr("name") == "secured-code" ) {
+					error.insertAfter(element.parent("div"));
+				}
+				if (element.attr("name") == "mobile" ) {
+					error.insertAfter(element.parent("div"));
+				}
+				if (element.attr("name") == "email" ) {
+					error.insertAfter(element);
+				}
+				if (element.attr("name") == "company" ) {
+					error.insertAfter(element);
+				}
+				if (element.attr("name") == "postalCode" ) {
+					error.insertAfter(element);
+				}
+				if (element.attr("name") == "city" ) {
+					error.insertAfter(element);
+				}
+				if (element.attr("name") == "credit-card" ) {
+					error.insertAfter(element);
+				}
+				if (element.attr("name") == "name-of-card" ) {
+					error.insertAfter(element);
+				}
+				if (element.attr("name") == "state" ) {
+					error.insertAfter(element);
+				}
+				if (element.attr("name") == "province" ) {
 					error.insertAfter(element);
 				}
 			  },		
@@ -61,12 +93,14 @@ $(document).ready(function () {
 				},
 				"postalCode": {
 					required: true,
+					onlyNumber: true
 				},
 				"city": {
 					required: true,
 				},
 				"mobile": {
 					required: true,
+					onlyNumber: true
 				},
 				"credit-card": {
 					required: true,

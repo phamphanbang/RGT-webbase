@@ -16,3 +16,35 @@
 .row .col-xl-9 {
     background-color: #f1f1f1;
 }
+
+@media screen and (max-width: 1200px) {
+    .banner-right {
+        margin-left: 0em;
+    }
+    
+    .banner-left {
+        width: 37%;
+    }
+
+    .slide-control {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .banner-right {
+        margin-left: 0em;
+    }
+    
+    .banner-left {
+        width: 26%;
+    }
+
+    .slide-control {
+        margin-top: 2em;
+    }
+
+    .social {
+        padding-left: 0em;
+    }
+}

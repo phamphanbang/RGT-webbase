@@ -160,7 +160,7 @@
                                     <p>HAVE YOU HAVE A COUPON</p>
                                     <div class="input-group ">
                                         <input type="text" class="form-control" placeholder="INSERT CODE" >
-                                        <button class="btn btn-dark" type="button" style="margin-left: 30%;">UPDATE SHOPPING CART</button>
+                                        <button class="btn btn-dark update-cart" type="button" style="margin-left: 30%;">UPDATE SHOPPING CART</button>
                                     </div>
                                     <button class="btn continue-shopping" type="button">
                                         or continue shopping
@@ -176,31 +176,31 @@
                                 <p>Your cart</p>
                                 <div class="cart-review-info-price"> 
                                     <i class="fas fa-euro-sign "></i>
-                                    <p>12345</p>
+                                    <p id="your-cart">12345</p>
                                 </div>
                             </div>
                             <div class="cart-review-info">
-                                <p>Your cart</p>
+                                <p>Shipping</p>
                                 <div class="cart-review-info-price"> 
                                     <i class="fas fa-euro-sign "></i>
-                                    <p>12345</p>
+                                    <p>free</p>
                                 </div>
                             </div>
                             <div class="cart-review-info">
-                                <p>Your cart</p>
+                                <p>VAT</p>
                                 <div class="cart-review-info-price"> 
                                     <i class="fas fa-euro-sign "></i>
-                                    <p>12345</p>
+                                    <p id="vat">12345</p>
                                 </div>
                             </div>
                             <div class="cart-review-info">
-                                <p>Your cart</p>
+                                <p>Order Total</p>
                                 <div class="cart-review-info-price"> 
                                     <i class="fas fa-euro-sign "></i>
-                                    <p>12345</p>
+                                    <p id="order-total">12345</p>
                                 </div>
                             </div>
-                            <button class="btn btn-dark" type="button" style="margin-bottom: 3em;">CHECKOUT</button>
+                            <a class="btn btn-dark" id="checkout" href="./checkout.html" type="button" style="margin-bottom: 3em;">CHECKOUT</a>
                         </div>
                     </div>
                 </div>
@@ -208,89 +208,33 @@
                     <div class="product-header">
                         <h3>YOU MIGHT ALSO LIKE</h3>
                     </div>
-                    <div class="product-container">
-                        <div class="product-item">
-                            <div class="product-img">
-                                <img src="https://picsum.photos/300/340" alt=""
-                                    class="figure-img img-fluid ">
-                            </div>
-                            <div class="product-description">
-                                <p>Lorem Ipsum</p>
-                                <div class="product-price">
-                                    <p class="price">$44</p>
-                                    <p class="on-sale">$10</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-img">
-                                <img src="https://picsum.photos/300/340" alt=""
-                                    class="figure-img img-fluid ">
-                            </div>
-                            <div class="product-description">
-                                <p>Lorem Ipsum</p>
-                                <div class="product-price">
-                                    $44
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-img">
-                                <img src="https://picsum.photos/300/340" alt=""
-                                    class="figure-img img-fluid ">
-                            </div>
-                            <div class="product-description">
-                                <p>Lorem Ipsum</p>
-                                <div class="product-price">
-                                    $44
-                                </div>
-                            </div>
-                        </div>
+                    <div class="product-container" id="also-like">
+                        
 
+                    </div>
+                    <div class="product-slide color-aqua" >
+                        <button class="btn pc-left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="btn pc-right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="product">
                     <div class="product-header">
                         <h3>RECENTLY VIEWED</h3>
                     </div>
-                    <div class="product-container">
-                        <div class="product-item">
-                            <div class="product-img">
-                                <img src="https://picsum.photos/300/340" alt=""
-                                    class="figure-img img-fluid ">
-                            </div>
-                            <div class="product-description">
-                                <p>Lorem Ipsum</p>
-                                <div class="product-price">
-                                    <p class="price">$44</p>
-                                    <p class="on-sale">$10</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-img">
-                                <img src="https://picsum.photos/300/340" alt=""
-                                    class="figure-img img-fluid ">
-                            </div>
-                            <div class="product-description">
-                                <p>Lorem Ipsum</p>
-                                <div class="product-price">
-                                    $44
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="product-img">
-                                <img src="https://picsum.photos/300/340" alt=""
-                                    class="figure-img img-fluid ">
-                            </div>
-                            <div class="product-description">
-                                <p>Lorem Ipsum</p>
-                                <div class="product-price">
-                                    $44
-                                </div>
-                            </div>
-                        </div>
+                    <div class="product-container" id="recently-viewed">
+                        
+                    </div>
+                    <div class="product-slide">
+                        <button class="btn pc-left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="btn pc-right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>

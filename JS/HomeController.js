@@ -11,7 +11,7 @@ let renderAllProduct = () => {
     .then(data => {
         console.log(data);
         allData=data;
-        const html = data.map(item => {
+        const html = data.slice(0,6).map(item => {
             return `
             <div class="product-item" >
             <div class="product-img">
