@@ -230,6 +230,11 @@
     display: none;
 }
 
+.sort-by-click:hover {
+    color: white;
+    background-color: orangered;
+}
+
 .sort-by-click .togle {
     display : inline-block;
 }
