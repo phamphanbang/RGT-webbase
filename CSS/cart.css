@@ -61,6 +61,14 @@
     margin-right: 3.5em;
 }
 
+.page:hover {
+    color: orangered;
+}
+
+.page-nav .activate {
+    color: orangered;
+}
+
 .page .num {
     padding: 0.6em 1em;
     border: 1px solid;

@@ -1,5 +1,6 @@
 var cart = [];
 var allData = [];
+var isItemAdded = false;
 
 let itemChange = () => {
     let yourCart = 0;
@@ -107,6 +108,7 @@ let renderCart = () => {
         cart = cart.map(i => i.id==id?newItem:i);
         // localStorage.setItem("cart",JSON.stringify(cart));
         // console.log(cart);
+        isItemAdded = false;
         itemChange();
     });
     $(".decrease-count").click(function (e) { 
@@ -131,6 +133,7 @@ let renderCart = () => {
         // localStorage.setItem("cart",JSON.stringify(cart));
         // console.log(cart);
         itemChange();
+        isItemAdded = false
         }
         else if (item.count <= 1) {
             let check = confirm("Do you want to remove this item from cart ?");
@@ -139,6 +142,7 @@ let renderCart = () => {
                 cart = cart.filter(i => i.id != id);
                 $(removeId).remove();
                 itemChange();
+                isItemAdded = false
                 // localStorage.setItem("cart",JSON.stringify(cart));
             }
         }
@@ -164,6 +168,7 @@ let renderCart = () => {
         // localStorage.setItem("cart",JSON.stringify(cart));
         // console.log(cart);
         itemChange();
+        isItemAdded = false
     });
     $(".item-delete").click(function (e) { 
         let id = $(this).closest('.cart-row').attr('id');
@@ -180,14 +185,7 @@ let renderCart = () => {
         $(removeId).remove();
         //localStorage.setItem("cart",JSON.stringify(cart));
         itemChange();
-    });
-    $(".update-cart").click(function (e) {
-        let check = confirm("Do you want to update your cart ?");
-        if (check){
-            localStorage.setItem("cart",JSON.stringify(cart));
-            alert("Your cart is now up-to-date");
-        }
-    
+        isItemAdded = false
     });
     $("#checkout").click(function (e) { 
         let checkout = {
@@ -286,7 +284,7 @@ let renderProduct = () => {
             }
             console.log(cart);
             localStorage.setItem("cart",JSON.stringify(cart));
-            
+            isItemAdded = true;
             $(".be-removed").remove();
             renderCart();
             alert("Added to cart!!!")
@@ -295,10 +293,18 @@ let renderProduct = () => {
             let id = $(this).closest('.item-hover').attr('id');
             sessionStorage.setItem("curent-id",id);
         })
+        
     })
 }
 
 renderCart();
 renderProduct();
-
+$(".update-cart").click(function (e) {
+    let check = confirm("Do you want to update your cart ?");
+    if (check){
+        localStorage.setItem("cart",JSON.stringify(cart));
+        alert("Your cart is now up-to-date");
+    }
+    
+});
 
