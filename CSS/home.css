@@ -19,10 +19,12 @@
 
 @media screen and (max-width: 1200px) {
     .banner-right {
+        flex: 1;
         margin-left: 0em;
     }
     
     .banner-left {
+        flex: 1;
         width: 37%;
     }
 
@@ -33,10 +35,12 @@
 
 @media screen and (max-width: 1300px) {
     .banner-right {
+        flex: 1;
         margin-left: 0em;
     }
     
     .banner-left {
+        flex: 1;
         width: 26%;
     }
 

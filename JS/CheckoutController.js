@@ -1,3 +1,15 @@
+var checkout = sessionStorage.getItem("checkout");
+
+let renderCheckout = () => {
+	if(checkout) {
+		$("#your-cart").text(checkout.yourCart);
+    	$("#vat").text(checkout.vat);
+    	$("#order-total").text(checkout.orderTotal);
+	}
+}
+
+renderCheckout();
+
 $(document).ready(function () {
     // $("#shipping-email").on("change", function () {
 	// 	console.log(this.value)

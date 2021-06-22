@@ -31,6 +31,8 @@
 }
 
 .social {
+    display: flex;
+    align-items: center;
     list-style: none;
     float: left;
     padding-left: 3em;

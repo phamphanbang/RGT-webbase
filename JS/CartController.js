@@ -1,101 +1,6 @@
 var cart = [];
 var allData = [];
 
-let renderProduct = () => {
-    fetch('http://localhost:3000/product')
-    .then(response => {
-        if(!response.ok){
-            throw Error('ERROR');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-        allData=data;
-        const subHtml = data.slice(0,3).map(item => {
-            return `
-            <div class="product-item" >
-            <div class="product-img">
-                <img src="https://picsum.photos/300/340" alt=""
-                    class="figure-img img-fluid ">
-            </div>
-            <div class="product-description">
-                <p>${item.product_name}</p>
-                <div class="product-price">
-                    $${item.product_price}
-                </div>
-            </div>
-            <div class="item-hover" id="${item.id}">
-                <a href="./productPage.html" class="btn go-to-detail" role="button" >
-                    Detail
-                </a>
-                <button class="btn add-to-cart" >
-                    Add to cart
-                </button>
-            </div>
-            </div>
-            `     
-        }).join("");
-        $("#also-like").append(subHtml);
-
-        const subHtml2 = data.slice(-3).map(item => {
-            return `
-            <div class="product-item" >
-            <div class="product-img">
-                <img src="https://picsum.photos/300/340" alt=""
-                    class="figure-img img-fluid ">
-            </div>
-            <div class="product-description">
-                <p>${item.product_name}</p>
-                <div class="product-price">
-                    $${item.product_price}
-                </div>
-            </div>
-            <div class="item-hover" id="${item.id}">
-                <a href="./productPage.html" class="btn go-to-detail" role="button" >
-                    Detail
-                </a>
-                <button class="btn add-to-cart" >
-                    Add to cart
-                </button>
-            </div>
-            </div>
-            `     
-        }).join("");
-        $("#recently-viewed").append(subHtml2);
-
-    })
-    .then(()=>{
-        $(".add-to-cart").click(function () {
-            let id = $(this).closest('.item-hover').attr('id');
-            
-            var cart = JSON.parse(localStorage.getItem("cart"));
-            if(cart == null) cart = [];
-            let temp = cart.find(i => i.id == id);
-            if(!temp){
-                let item = allData.find(i => i.id == id);
-                var addToCart = {
-                    "id" : item.id,
-                    "product_name" : item.product_name,
-                    "product_price" : item.product_price,
-                    "count" : 1
-                }
-                cart.push(addToCart);
-            }
-            else {
-                cart.map(i => i.id==id?i.count++:i);
-            }
-            console.log(cart);
-            localStorage.setItem("cart",JSON.stringify(cart));
-            alert("Product added !");
-        });
-        $(".go-to-detail").click(function () {
-            let id = $(this).closest('.item-hover').attr('id');
-            sessionStorage.setItem("curent-id",id);
-        })
-    })
-}
-
 let itemChange = () => {
     let yourCart = 0;
     let vat = 0;
@@ -114,7 +19,7 @@ let renderCart = () => {
     console.log(1);
     cart = JSON.parse(localStorage.getItem("cart"));
     if(cart == null) cart = [];
-    let html = `<div class="row cart-row">
+    let html = `<div class="row cart-row be-removed">
     <div class="col-4 cart-title">
         <p>PRODUCT NAME</p>
     </div>
@@ -129,7 +34,7 @@ let renderCart = () => {
     </div>
     </div>`;
     html += cart.map(item => {
-        return `<div class="row cart-row" id="${item.id}">
+        return `<div class="row cart-row be-removed" id="${item.id}">
         <div class="col-4">
             <div class="cart-product-detail">
                 <div class="cart-product-img">
@@ -262,14 +167,19 @@ let renderCart = () => {
     });
     $(".item-delete").click(function (e) { 
         let id = $(this).closest('.cart-row').attr('id');
-        let check = confirm("Do you want to remove this item from cart ?");
-        if (check){
-            let removeId = "#" + id.toString();
-            cart = cart.filter(i => i.id != id);
-            $(removeId).remove();
-            itemChange();
-            // localStorage.setItem("cart",JSON.stringify(cart));
-        }
+        // let check = confirm("Do you want to remove this item from cart ?");
+        // if (check){
+        //     let removeId = "#" + id.toString();
+        //     cart = cart.filter(i => i.id != id);
+        //     $(removeId).remove();
+        //     localStorage.setItem("cart",JSON.stringify(cart));
+        //     itemChange();
+        // }
+        let removeId = "#" + id.toString();
+        cart = cart.filter(i => i.id != id);
+        $(removeId).remove();
+        //localStorage.setItem("cart",JSON.stringify(cart));
+        itemChange();
     });
     $(".update-cart").click(function (e) {
         let check = confirm("Do you want to update your cart ?");
@@ -277,18 +187,118 @@ let renderCart = () => {
             localStorage.setItem("cart",JSON.stringify(cart));
             alert("Your cart is now up-to-date");
         }
+    
     });
     $("#checkout").click(function (e) { 
         let checkout = {
-            "price-total" : $("#your-cart").text(yourCart),
+            "yourCart" : $("#your-cart").text(yourCart),
             "vat" : $("#vat").text(vat),
-            "order-total" : $("#order-total").text(orderTotal),
+            "orderTotal" : $("#order-total").text(orderTotal),
             "cart" : cart
         }
         localStorage.setItem("checkout",JSON.stringify(checkout));
     });
 }
 
-renderCart();
+let renderProduct = () => {
+    fetch('http://localhost:3000/product')
+    .then(response => {
+        if(!response.ok){
+            throw Error('ERROR');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+        allData=data;
+        const subHtml = data.slice(0,3).map(item => {
+            return `
+            <div class="product-item" >
+            <div class="product-img">
+                <img src="https://picsum.photos/300/340" alt=""
+                    class="figure-img img-fluid ">
+            </div>
+            <div class="product-description">
+                <p>${item.product_name}</p>
+                <div class="product-price">
+                    $${item.product_price}
+                </div>
+            </div>
+            <div class="item-hover" id="${item.id}">
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
+                    Detail
+                </a>
+                <button class="btn add-to-cart" >
+                    Add to cart
+                </button>
+            </div>
+            </div>
+            `     
+        }).join("");
+        $("#also-like").append(subHtml);
 
+        const subHtml2 = data.slice(-3).map(item => {
+            return `
+            <div class="product-item" >
+            <div class="product-img">
+                <img src="https://picsum.photos/300/340" alt=""
+                    class="figure-img img-fluid ">
+            </div>
+            <div class="product-description">
+                <p>${item.product_name}</p>
+                <div class="product-price">
+                    $${item.product_price}
+                </div>
+            </div>
+            <div class="item-hover" id="${item.id}">
+                <a href="./productPage.html" class="btn go-to-detail" role="button" >
+                    Detail
+                </a>
+                <button class="btn add-to-cart" >
+                    Add to cart
+                </button>
+            </div>
+            </div>
+            `     
+        }).join("");
+        $("#recently-viewed").append(subHtml2);
+
+    })
+    .then(()=>{
+        $(".add-to-cart").click(function () {
+            let id = $(this).closest('.item-hover').attr('id');
+            
+            //var cart = JSON.parse(localStorage.getItem("cart"));
+            if(cart == null) cart = [];
+            let temp = cart.find(i => i.id == id);
+            if(!temp){
+                let item = allData.find(i => i.id == id);
+                var addToCart = {
+                    "id" : item.id,
+                    "product_name" : item.product_name,
+                    "product_price" : item.product_price,
+                    "count" : 1
+                }
+                cart.push(addToCart);
+            }
+            else {
+                cart.map(i => i.id==id?i.count++:i);
+            }
+            console.log(cart);
+            localStorage.setItem("cart",JSON.stringify(cart));
+            
+            $(".be-removed").remove();
+            renderCart();
+            alert("Added to cart!!!")
+        });
+        $(".go-to-detail").click(function () {
+            let id = $(this).closest('.item-hover').attr('id');
+            sessionStorage.setItem("curent-id",id);
+        })
+    })
+}
+
+renderCart();
 renderProduct();
+
+
